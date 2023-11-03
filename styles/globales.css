@@ -1,0 +1,99 @@
+/** estilos globales **/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1REM = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1, 
+h2, 
+h3 {
+    margin: 1rem 0 4rem 0;
+    font-family: var(--letraPrincipal);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 4.8rem;
+}
+@media (min-width: 768px) { 
+    h1 {
+        font-size: 5rem;
+    }
+}
+h2 {
+    font-size: 3rem;
+}
+@media (min-width: 768px) { 
+    h2 {
+        font-size: 4rem;
+    }
+}
+h3 {
+    font-size: 2.6rem;
+}
+@media (min-width: 768px) { 
+    h3 {
+        font-size: 3.2rem;
+    }
+}
+a {
+    text-decoration: none;
+    font-family: var(--letraSecundario);
+    line-height: 2;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+p {
+    font-family: var(--letraTextos);
+}
+
+.btn {
+    background-color: var(--blanco);
+    color: var(--gris);
+    padding: .5rem 2rem;
+    transition: background-color .3s ease-out ;
+    border: 1px solid var(--gris);
+    width: 100%;
+}
+.btn:hover {
+    background-color: var(--gris);
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) { 
+    .btn {
+        width: auto;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    background-color: var(--body);
+}
+
+.no__margin {
+    margin: 0;
+}
+
+.no__padding {
+    padding: 0;
+}

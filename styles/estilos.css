@@ -1,0 +1,326 @@
+/* fuentes */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;700&family=Open+Sans:wght@300;400;500;700&family=Raleway:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --letraPrincipal: 'Raleway', sans-serif;
+    --letraSecundario: 'Open Sans', sans-serif;
+    --letraTextos: 'Inter Tight', sans-serif;
+}
+
+/* colores */
+
+/* It's defining variables. */
+:root {
+    --blanco: #fff;
+    --negro: #111;
+    --gris: #343a40;
+    --body: #f0f5f5;
+}
+
+/* header */
+
+.header {
+    min-height: 60rem;
+    background-image: url(../img/hero.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    padding: 5rem 0;
+}
+
+
+
+.contenido__header {
+    display: flex;
+    flex-direction: column;
+    height: calc(60rem - 4rem);
+    justify-content: space-between;
+    color: var(--blanco);
+}
+
+.nombre__sitio {
+    font-weight: 300;
+}
+
+.nombre__sitio span {
+    font-weight: 900;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .contacto {
+        align-items: flex-end;
+    }
+}
+
+.telefono {
+    display: flex;
+    align-items: center;
+}
+
+.telefono::before {
+    content: '';
+    background-image: url(../img/telefono.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 4rem;
+    height: 4rem;
+    display: block;
+}
+
+.header a {
+    color: var(--blanco);
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        flex-direction: row;
+    }
+}
+
+.navegacion a {
+    padding: .5rem;
+    transition: background-color .3s;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .navegacion a {
+        padding: 0.6rem 1rem;
+    }
+}
+
+.navegacion a:hover {
+    background-color: rgb(255, 255, 255, .6);
+    color: var(--negro);
+}
+
+
+@media (min-width: 768px) {
+    .slogan {
+        text-align: right;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .slogan h1 {
+        font-size: 5rem;
+    }
+}
+
+.slogan p {
+    line-height: 1;
+}
+
+
+/* seccion de nosotros */
+
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-image: url(../img/nosotros.webp);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+@media (min-width: 992px) {
+    .nosotros {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.contenido__nosotros {
+    background-color: var(--blanco);
+    padding: 5rem;
+}
+
+@media (min-width: 992px) {
+    .contenido__nosotros {
+        grid-column: 2 / 4;
+    }
+
+}
+
+.contenido__nosotros h2, .contenido__nosotros p {
+    margin-bottom: 1rem;
+}
+
+/* seccion de modelos de casas */
+
+.modelo {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    margin-bottom: 5rem;
+}
+
+.modelo:last-of-type {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .modelo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.modelo .contenido__modelo p {
+    margin-bottom: 3rem;
+}
+
+.contenido__modelo {
+    padding: 5rem;
+    background-color: var(--blanco);
+}
+
+
+.basico {
+    background-image: url(../img/modelo_basico.webp);
+
+}
+
+@media (min-width: 768px) {
+    .basico {
+        background-position: top right;
+    }
+
+    .basico .contenido__modelo {
+        grid-row: 2 / 3;
+        padding: 4rem;
+    }
+
+}
+
+.premier {
+    background-image: url(../img/modelo_premier.webp);
+}
+
+@media (min-width: 768px) {
+    .premier {
+        background-position: top left;
+    }
+
+    .premier .contenido__modelo {
+        grid-column: 2 / 3;
+        padding: 2rem;
+    }
+}
+
+.elite {
+    background-image: url(../img/modelo_elite.webp);
+}
+
+@media (min-width: 768px) {
+    .elite {
+        background-position: top right;
+    }
+
+    .elite .contenido__modelo {
+        grid-row: 2 / 3;
+        padding: 4rem;
+    }
+}
+
+
+/* seccion de galeria */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+ .galeria {
+    grid-template-columns: repeat(3, 1fr);
+ }
+}
+
+.galeria img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.galeria .imagen:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+@media (min-width: 768px) {
+    .galeria .imagen:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+    }
+}
+
+.galeria .imagen:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+}
+
+@media (min-width: 768px) {
+    .galeria .imagen:nth-child(3) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+}
+
+.galeria .imagen:nth-child(6) {
+    grid-row: 2 / 4;
+}
+
+@media (min-width: 768px) {
+    .galeria .imagen:nth-child(6) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+    }
+}
+
+
+/* seccion de footer */
+
+.footer {
+    height: 50rem;
+    background-image: url(../img/footer_bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer .navegacion a, .telefono, .footer {
+    color: var(--blanco);
+}
+
+.copy {
+    background-color: var(--negro);
+    padding: 1.2rem 0;
+    margin: 5rem 0 0 0;
+}
